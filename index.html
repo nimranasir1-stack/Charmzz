@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charmzz - Clay Bead Bracelets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">✨ Charmzz ✨</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Shop</a></li>
+                <li><a href="#special-requests">Custom Request</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="cart-icon">🛒 <span id="cart-count">0</span></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Charmzz</h2>
+            <p>Beautiful Clay Bead Bracelets, Handcrafted with Love</p>
+            <button class="cta-btn" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2>Our Clay Bead Collections</h2>
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">🎨</div>
+                <h3>Rainbow Dreams</h3>
+                <p class="price">$5.00</p>
+                <button class="add-btn" onclick="addToCart('Rainbow Dreams', 5)">Add to Cart</button>
+            </div>
+
+            <!-- Product 2 - DISCOUNT -->
+            <div class="product-card discount">
+                <div class="discount-badge">SALE</div>
+                <div class="product-image">🎨</div>
+                <h3>Pastel Vibes</h3>
+                <p class="original-price">$5.00</p>
+                <p class="price">$3.00</p>
+                <button class="add-btn" onclick="addToCart('Pastel Vibes', 3)">Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">🎨</div>
+                <h3>Sunset Glow</h3>
+                <p class="price">$5.00</p>
+                <button class="add-btn" onclick="addToCart('Sunset Glow', 5)">Add to Cart</button>
+            </div>
+
+            <!-- Product 4 - DISCOUNT -->
+            <div class="product-card discount">
+                <div class="discount-badge">SALE</div>
+                <div class="product-image">🎨</div>
+                <h3>Mystic Moon</h3>
+                <p class="original-price">$5.00</p>
+                <p class="price">$3.00</p>
+                <button class="add-btn" onclick="addToCart('Mystic Moon', 3)">Add to Cart</button>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image">🎨</div>
+                <h3>Rosy Petals</h3>
+                <p class="price">$5.00</p>
+                <button class="add-btn" onclick="addToCart('Rosy Petals', 5)">Add to Cart</button>
+            </div>
+
+            <!-- Product 6 - DISCOUNT -->
+            <div class="product-card discount">
+                <div class="discount-badge">SALE</div>
+                <div class="product-image">🎨</div>
+                <h3>Golden Sparkle</h3>
+                <p class="original-price">$5.00</p>
+                <p class="price">$3.00</p>
+                <button class="add-btn" onclick="addToCart('Golden Sparkle', 3)">Add to Cart</button>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="product-image">🎨</div>
+                <h3>Lavender Dreams</h3>
+                <p class="price">$5.00</p>
+                <button class="add-btn" onclick="addToCart('Lavender Dreams', 5)">Add to Cart</button>
+            </div>
+
+            <!-- Product 8 - DISCOUNT -->
+            <div class="product-card discount">
+                <div class="discount-badge">SALE</div>
+                <div class="product-image">🎨</div>
+                <h3>Pearl Essence</h3>
+                <p class="original-price">$5.00</p>
+                <p class="price">$3.00</p>
+                <button class="add-btn" onclick="addToCart('Pearl Essence', 3)">Add to Cart</button>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card">
+                <div class="product-image">🎨</div>
+                <h3>Berry Bliss</h3>
+                <p class="price">$5.00</p>
+                <button class="add-btn" onclick="addToCart('Berry Bliss', 5)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Requests Section -->
+    <section id="special-requests" class="special-requests">
+        <h2>Custom Request</h2>
+        <p>Can't find what you're looking for? Create your own custom clay bead bracelet!</p>
+        <form class="request-form" onsubmit="submitRequest(event)">
+            <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="colors">Preferred Colors *</label>
+                <input type="text" id="colors" name="colors" placeholder="e.g., Pink, Gold, White" required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Describe Your Custom Bracelet *</label>
+                <textarea id="description" name="description" rows="5" placeholder="Tell us your ideas, style preferences, size, etc." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="budget">Budget *</label>
+                <input type="number" id="budget" name="budget" placeholder="e.g., $10" min="1" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Request</button>
+        </form>
+        <p class="success-message" id="successMessage" style="display:none;">✨ Thank you! We'll review your request and get back to you soon!</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <p>Email: info@charmzz.com</p>
+        <p>Instagram: @charmzz_bracelets</p>
+        <p>We'd love to hear from you!</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Charmzz - All Rights Reserved. Made with 💕</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
