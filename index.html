@@ -36,7 +36,9 @@
         <div class="products-grid">
             <!-- Product 1 -->
             <div class="product-card">
-                <div class="product-image"><img src="blue clay bead.jpg" alt="Ocean Breeze bracelet" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"></div>
+                <div class="product-image" onclick="openModal('blue clay bead.jpg', 'Ocean Breeze', 'Dive into serenity with this enchanting bracelet', 'Inspired by the calming whisper of ocean waves, Ocean Breeze is a dreamy blend of soft sky blues, luminous pearls, and gold accents. The delicate turtle charm brings a touch of peaceful wanderlust to your wrist. Perfect for those who love the ocean\\'s tranquility and want to carry a piece of coastal magic wherever they go. 💙')">
+                    <img src="blue clay bead.jpg" alt="Ocean Breeze bracelet" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; cursor: pointer;">
+                </div>
                 <h3>Ocean Breeze</h3>
                 <p class="price">$5.00</p>
                 <button class="add-btn" onclick="addToCart('Ocean Breeze', 5)">Add to Cart</button>
@@ -45,7 +47,9 @@
             <!-- Product 2 - DISCOUNT -->
             <div class="product-card discount">
                 <div class="discount-badge">SALE</div>
-                <div class="product-image">🎨</div>
+                <div class="product-image" onclick="openModal('', 'Pastel Vibes', 'Soft colors, big dreams', 'Escape into a world of gentle pastels with this whimsical bracelet. Dreamy pinks, blues, and lavenders create a calming aesthetic that\\'s perfect for spreading positivity and good vibes wherever you go.')">
+                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 60px; cursor: pointer;">🎨</div>
+                </div>
                 <h3>Pastel Vibes</h3>
                 <p class="original-price">$5.00</p>
                 <p class="price">$3.00</p>
@@ -54,7 +58,9 @@
 
             <!-- Product 3 -->
             <div class="product-card">
-                <div class="product-image">🎨</div>
+                <div class="product-image" onclick="openModal('', 'Sunset Glow', 'Chase the magic hour', 'Watch the sun dip below the horizon with this stunning gradient bracelet. Warm oranges, pinks, and golds blend together to capture that magical moment when day turns to night. Pure warmth on your wrist.')">
+                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 60px; cursor: pointer;">🎨</div>
+                </div>
                 <h3>Sunset Glow</h3>
                 <p class="price">$5.00</p>
                 <button class="add-btn" onclick="addToCart('Sunset Glow', 5)">Add to Cart</button>
@@ -63,7 +69,9 @@
             <!-- Product 4 - DISCOUNT -->
             <div class="product-card discount">
                 <div class="discount-badge">SALE</div>
-                <div class="product-image">🎨</div>
+                <div class="product-image" onclick="openModal('', 'Mystic Moon', 'Embrace the night\\'s mystery', 'Under the moonlight, anything is possible. This enchanting bracelet features deep purples, silvers, and shimmering beads that glow with celestial magic. Perfect for dreamers and night lovers.')">
+                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 60px; cursor: pointer;">🎨</div>
+                </div>
                 <h3>Mystic Moon</h3>
                 <p class="original-price">$5.00</p>
                 <p class="price">$3.00</p>
@@ -72,7 +80,9 @@
 
             <!-- Product 5 -->
             <div class="product-card">
-                <div class="product-image">🎨</div>
+                <div class="product-image" onclick="openModal('', 'Rosy Petals', 'Bloom with grace', 'Romantic and delicate, Rosy Petals celebrates femininity and beauty. Soft pinks and rose tones mixed with gold accents create a bracelet that\\'s as lovely as a garden in full bloom.')">
+                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 60px; cursor: pointer;">🎨</div>
+                </div>
                 <h3>Rosy Petals</h3>
                 <p class="price">$5.00</p>
                 <button class="add-btn" onclick="addToCart('Rosy Petals', 5)">Add to Cart</button>
@@ -81,7 +91,9 @@
             <!-- Product 6 - DISCOUNT -->
             <div class="product-card discount">
                 <div class="discount-badge">SALE</div>
-                <div class="product-image">🎨</div>
+                <div class="product-image" onclick="openModal('', 'Golden Sparkle', 'Shine bright like a diamond', 'Luxury meets playfulness in this glamorous design. Rich golds and sparkling beads catch the light with every movement. Perfect for those who love to shimmer and shine.')">
+                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 60px; cursor: pointer;">🎨</div>
+                </div>
                 <h3>Golden Sparkle</h3>
                 <p class="original-price">$5.00</p>
                 <p class="price">$3.00</p>
@@ -90,7 +102,9 @@
 
             <!-- Product 7 -->
             <div class="product-card">
-                <div class="product-image">🎨</div>
+                <div class="product-image" onclick="openModal('', 'Lavender Dreams', 'Peaceful and serene', 'Drift away to a field of lavender with this calming creation. Soft purple tones and gentle beads create a soothing energy that brings tranquility to your day.')">
+                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 60px; cursor: pointer;">🎨</div>
+                </div>
                 <h3>Lavender Dreams</h3>
                 <p class="price">$5.00</p>
                 <button class="add-btn" onclick="addToCart('Lavender Dreams', 5)">Add to Cart</button>
@@ -99,7 +113,9 @@
             <!-- Product 8 - DISCOUNT -->
             <div class="product-card discount">
                 <div class="discount-badge">SALE</div>
-                <div class="product-image">🎨</div>
+                <div class="product-image" onclick="openModal('', 'Pearl Essence', 'Timeless elegance', 'Simple yet stunning, Pearl Essence captures the sophisticated beauty of classic pearls. Clean whites and silvers mixed with delicate gold accents make this bracelet perfect for any occasion.')">
+                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 60px; cursor: pointer;">🎨</div>
+                </div>
                 <h3>Pearl Essence</h3>
                 <p class="original-price">$5.00</p>
                 <p class="price">$3.00</p>
@@ -108,13 +124,30 @@
 
             <!-- Product 9 -->
             <div class="product-card">
-                <div class="product-image">🎨</div>
+                <div class="product-image" onclick="openModal('', 'Berry Bliss', 'Sweet vibes only', 'Indulge in rich berry tones with this delightful bracelet. Deep purples, magentas, and plum colors create a vibrant yet sophisticated look that celebrates boldness and joy.')">
+                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 60px; cursor: pointer;">🎨</div>
+                </div>
                 <h3>Berry Bliss</h3>
                 <p class="price">$5.00</p>
                 <button class="add-btn" onclick="addToCart('Berry Bliss', 5)">Add to Cart</button>
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Product Image" style="max-width: 100%; max-height: 400px; object-fit: contain;">
+                <div class="modal-description">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalSubtitle" style="font-style: italic; color: #666; margin-bottom: 15px;"></p>
+                    <p id="modalFullDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Special Requests Section -->
     <section id="special-requests" class="special-requests">
@@ -165,5 +198,39 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function openModal(imageSrc, title, subtitle, description) {
+            const modal = document.getElementById('productModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalSubtitle = document.getElementById('modalSubtitle');
+            const modalFullDescription = document.getElementById('modalFullDescription');
+            
+            if (imageSrc) {
+                modalImage.src = imageSrc;
+                modalImage.style.display = 'block';
+            } else {
+                modalImage.style.display = 'none';
+            }
+            
+            modalTitle.textContent = title;
+            modalSubtitle.textContent = subtitle;
+            modalFullDescription.textContent = description;
+            
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('productModal');
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('productModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
