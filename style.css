@@ -155,12 +155,18 @@ body {
 .product-image {
     font-size: 4rem;
     margin: 1rem 0;
-    height: 100px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #fff9e6 0%, #ffe6f0 100%);
     border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.product-image:hover {
+    transform: scale(1.05);
 }
 
 .product-card h3 {
@@ -198,6 +204,81 @@ body {
 .add-btn:hover {
     background: linear-gradient(135deg, #ffb3cc 0%, #ffa6c1 100%);
     transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #c084a0;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #d4a574;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.modal-description {
+    padding: 1rem 0;
+}
+
+.modal-description h2 {
+    color: #c084a0;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.modal-description p {
+    color: #666;
+    line-height: 1.8;
 }
 
 /* Special Requests Section */
@@ -333,5 +414,10 @@ body {
 
     .products h2 {
         font-size: 2rem;
+    }
+
+    .modal-content {
+        margin: 20% auto;
+        max-width: 90%;
     }
 }
